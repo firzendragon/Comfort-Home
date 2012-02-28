@@ -1,0 +1,75 @@
+<chart>
+    <chart_border top_thickness='2' bottom_thickness='2' left_thickness='2' right_thickness='2' />
+    <chart_data>
+        <row>
+           <null/>
+           <string>0</string>
+           <string></string>
+           <string></string>
+           <string></string>
+           <string>4</string>
+           <string></string>
+           <string></string>
+           <string></string>
+           <string>8</string>
+           <string></string>
+           <string></string>
+           <string></string>
+           <string>12</string>
+           <string></string>
+           <string></string>
+           <string></string>
+           <string>16</string>
+           <string></string>
+           <string></string>
+           <string></string>
+           <string>20</string>
+           <string></string>
+           <string></string>
+           <string></string>
+        </row>
+        <row>
+           <string>0001</string>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <null/>
+           <number>712.5</number>
+           <number>311.629032258</number>
+           <number>5.72773536896</number>
+           <number>5.69892473118</number>
+           <number>5.44634146341</number>
+           <number>4.74754098361</number>
+        </row>
+    </chart_data>
+    <chart_grid_h alpha='10' thickness='1' type='solid' />
+    <chart_grid_v alpha='10' thickness='1' type='solid' />
+    <chart_guide horizontal='true' thickness='1' color='ffffff' alpha='50' type='dashed' radius='5' 
+                                      line_color='000000' line_alpha='75' line_thickness='2' text_color='000000' text_h_alpha='90' />
+    <chart_type>line</chart_type>
+    <chart_pref point_shape='circle' line_thickness='2' zero_line='false' />
+    <chart_rect x='70' y='45' />
+    <draw>
+        <text shadow='low'  color='808080' alpha='55' size='18' x='220' y='270'  width='200' height='200' h_align='left'>Hour</text>
+        <text shadow='low'  color='808080' alpha='55' size='18' x='10'  y='200'  width='200' height='200' h_align='left' rotation='-90'>Lumen</text>
+        <text shadow='high' color='c6a300' alpha='85' size='14' x='40'  y='10'   width='200' height='200' h_align='left'>2012-02-18</text>
+        <text shadow='high' color='c6a300' alpha='85' size='14' x='380'  y='10'   width='200' height='200' h_align='left'>2012-02-19</text>
+    </draw>
+    <series_color>
+        <color>c6a300</color>
+    </series_color>
+</chart>

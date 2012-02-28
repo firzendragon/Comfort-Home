@@ -1,0 +1,51 @@
+objective.py 是無用檔案
+
+current:
+
+temperature: 20.1899986267
+humidity:    72.3315124511
+THI:         19.1775843297
+light:       47
+CO2:         1000
+
+standard:
+
+THI:    0~40
+light:  0~756
+CO2:    0~2500
+
+description:
+
+0.  main 執行過程
+
+    a.由 policy 取得 actuator 個數，和個別 attributes
+    b.由 policy 取得 policy 權重值
+    c.由 context 取得 現在環境的狀態轉換成評估標準
+    d.由 GA 取得 actuator plan
+    e.由 setting 取得 actuator plan 轉換成相對應的指令，並設定之
+
+1.  policy 底下附有 Policy, Actuator 兩個 class:
+
+    a. Policy   - 包含 climate, lighting, ventilation, energy_saving 的權重值
+    b. Actuator - 包含 actuator 的 id, name, power, attribute
+    
+2.  context 底下有 Context, Content 兩個 class:
+
+    a. Context  - 將環境狀態包起來的集合，如 Context.climate, Context.lighting, Context.ventilation
+    b. Content  - 將現在的環境狀態轉換成評估標準，如 climate -> THI, lighting -> Light Index, ventilation -> CO2 Index
+    
+3.  GA 底下有五個函數:
+
+    a. initialization - 初始化 actuator plan，並先 fitness
+    b. generation*     - while loop 中執行，每一個 actuator plan 均可作演化，隨機取另外三個，配出最好的保留
+    c. fitnession*     - while loop 中執行，用 HDD 和 comfort index 評分
+    d. selection*      - while loop 中執行，將最好的 10 個，存到 solutionList 中
+    e. terminal       - 
+    
+    
+problem:
+
+1. Models: data 的歧異度
+2. GA: crossover 的方法
+
+
