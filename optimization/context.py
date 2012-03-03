@@ -32,7 +32,7 @@ class Models():
 def getPowerBest(context, degree_days, endpoint, slope, attribute):
     ## if over the max actuator power
     if  (attribute  == 'climate'    and context.climate.current     > endpoint) or \
-        (attribute == 'lighting'    and context.lighting.current    > endpoint) or \
+        (attribute == 'lighting'    and context.lighting.current    < endpoint) or \
         (attribute == 'ventilation' and context.ventilation.current > endpoint):
         return slope * endpoint
     ## else, find the mapping actuator power
@@ -84,14 +84,17 @@ def getClimate(cursor):
     T = getValue(cursor, 'temperature')
     H = getValue(cursor, 'humidity')
     THI = getTHI(T, H)
+    THI = 30.9
     return getStandard(cursor, 'THI', THI)
     
 def getLighting(cursor):
     L = getValue(cursor, 'light')
+    L = 50.0
     return getStandard(cursor, 'light', L)
 
 def getVentilation(cursor):
     CO2 = getValue(cursor, 'CO2')
+    CO2 = 1000.0
     return getStandard(cursor, 'CO2', CO2)
 #######################################################
 def getContext(cursor):
