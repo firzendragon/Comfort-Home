@@ -1,0 +1,21 @@
+python main.py base
+python main.py population 40 1
+python main.py population 50 2
+python main.py population 60 3
+python main.py population 70 4
+python main.py population 80 5
+python main.py crossover 0.5 1
+python main.py crossover 0.6 2
+python main.py crossover 0.7 3
+python main.py crossover 0.8 4
+python main.py crossover 0.9 5
+python main.py shift 0.5 1
+python main.py shift 0.6 2
+python main.py shift 0.7 3
+python main.py shift 0.8 4
+python main.py shift 0.9 5
+python main.py mask 0.05 1
+python main.py mask 0.10 2
+python main.py mask 0.15 3
+python main.py mask 0.20 4
+python main.py mask 0.25 5
