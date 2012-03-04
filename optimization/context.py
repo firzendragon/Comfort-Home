@@ -84,7 +84,7 @@ def getClimate(cursor):
     T = getValue(cursor, 'temperature')
     H = getValue(cursor, 'humidity')
     THI = getTHI(T, H)
-    THI = 30.9
+    THI = 14.2
     return getStandard(cursor, 'THI', THI)
     
 def getLighting(cursor):
